@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="390dp"
+    android:layout_height="150dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="#5A5C67"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/pic"
+            android:scaleType="centerCrop"
+            android:layout_marginStart="15dp"
+            android:id="@+id/HugImage"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/TitleText"
+            android:text="@string/Title_name"
+            android:textSize="30sp"
+            android:layout_toEndOf="@+id/HugImage"
+            android:layout_marginStart="10dp"
+            android:layout_alignTop="@+id/HugImage"
+            android:fontFamily="casual"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/descriptionText"
+            android:text="@string/Desc"
+            android:textSize="20sp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/TitleText"/>
+
+<!--        <kr.co.prnd.readmore.ReadMoreTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/descriptionText"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/TitleText"
+            android:text="@string/Desc"
+            android:textSize="20sp"
+            app:readMoreMaxLine="1"
+            app:readMoreText="…"/>-->
+
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_favorite_border_24"
+            android:layout_marginStart="355dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/LikeButton"/>
+
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_edit_24"
+            android:layout_marginStart="355dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/LikeButton"
+            android:id="@+id/EditButton"/>
+
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_delete_24"
+            android:layout_marginStart="355dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/EditButton"
+            android:id="@+id/DeleteButton"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

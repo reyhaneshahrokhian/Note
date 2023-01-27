@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity"
+    android:background="#22263E">
+
+    <ImageView
+        android:id="@+id/EditImage"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:src="@drawable/ic_image_24"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"/>
+    <Button
+        android:id="@+id/EditImageButton"
+        android:layout_width="220dp"
+        android:layout_height="70dp"
+        android:layout_toEndOf="@+id/EditImage"
+        android:layout_marginTop="90dp"
+        android:layout_marginStart="10dp"
+        android:backgroundTint="#5A5C67"
+        android:text="Click to change image"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="17sp"/>
+
+    <EditText
+        android:id="@+id/editTextTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="14"
+        android:inputType="textPersonName"
+        android:hint="Edit Title"
+        android:textColorHint="@color/white"
+        android:textSize="22sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/EditImage"/>
+
+    <EditText
+        android:id="@+id/editTextDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="14"
+        android:hint="Edit Description"
+        android:textColorHint="@color/white"
+        android:textSize="22sp"
+        android:layout_below="@+id/editTextTitle"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:inputType="textCapSentences|textMultiLine"
+        android:lines="20"
+        android:minLines="1"
+        android:maxLines="21"/>
+
+    <Button
+        android:id="@+id/OkEdit"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="40dp"
+        android:text="ok"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:fontFamily="serif"
+        android:backgroundTint="#5A5C67"
+        android:layout_marginTop="750dp" />
+    <Button
+        android:id="@+id/CancelEdit"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="230dp"
+        android:text="Cancel"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:fontFamily="serif"
+        android:backgroundTint="#5A5C67"
+        android:layout_marginTop="750dp" />
+
+</RelativeLayout>

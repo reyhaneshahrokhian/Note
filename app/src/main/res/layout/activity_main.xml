@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    tools:openDrawer="start"
+    android:id="@+id/drawer_menu"
+    android:background="#22263E">
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:itemIconSize="30dp"
+        app:itemIconPadding="20dp"
+        android:backgroundTint="#22263E"
+        app:itemTextColor="@color/white"
+        app:itemIconTint="#5A5C67"
+        app:headerLayout="@layout/profile_menu"
+        app:menu="@menu/navigation_menu"
+        android:id="@+id/nav_view"/>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#22263E">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <ImageButton
+                android:id="@+id/menu_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_menu_24"
+                android:backgroundTint="#22263E"/>
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:text="My Notes"
+                android:textSize="30sp"
+                android:fontFamily="serif"
+                android:textColor="@color/white" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="690dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:foregroundTint="@color/white"
+                android:theme="@style/CardView"/>
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/AddButton"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_gravity="bottom|right"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:maxImageSize="80dp"
+                app:backgroundTint="#5A5C67"
+                android:scaleType="center"
+                app:fabSize="normal"
+                tools:ignore="RtlHardcoded"
+                android:contentDescription="AddFloatingButton"/>
+
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

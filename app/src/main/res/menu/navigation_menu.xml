@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/favorite"
+            android:icon="@drawable/ic_favorite_24"
+            android:title="Favorites"/>
+        <item android:id="@+id/deleted"
+            android:icon="@drawable/ic_delete_24"
+            android:title="Recycle bin"/>
+        <item android:id="@+id/setting"
+            android:icon="@drawable/ic_settings_24"
+            android:title="Setting"/>
+    </group>
+
+</menu>
